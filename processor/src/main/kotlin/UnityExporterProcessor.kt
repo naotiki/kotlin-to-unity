@@ -44,13 +44,18 @@ class UnityExporterProcessor(
             val file = codeGenerator.createNewFile(Dependencies(false), "UnityCSharp", className, "cs")
             file.appendText(
                 """
-                using System;
-                using UnityEngine;
-                public class $className {
-                    AndroidJavaClass androidClass=new AndroidJavaClass("${it.packageName.asString()}.$className")
-                    
-            """.trimIndent()
+                
+                
+                
+                    """.trimIndent()
             )
+            file.appendText("")
+            file.appendText("using System;")
+            file.appendText("using UnityEngine;")
+            file.appendText("public class $className {")
+            file.appendText("    AndroidJavaClass androidClass=new AndroidJavaClass(\"${it.packageName.asString()}.$className\")")
+         
+         
             fields[it]?.forEach {
 
                 file.appendText(
