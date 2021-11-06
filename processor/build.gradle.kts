@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm")
 }
 
-group = "xyz.naotiki_app"
+group = "xyz.naotiki_apps"
 version = "1.0"
 
 repositories {
